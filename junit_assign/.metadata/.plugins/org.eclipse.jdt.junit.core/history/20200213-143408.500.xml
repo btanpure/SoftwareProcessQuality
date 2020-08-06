@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="JunitSuite" project="junit_test" tests="5" started="5" failures="0" errors="0" ignored="0">
+  <testsuite name="junit.JunitSuite" time="0.0" displayname="JunitSuite" uniqueid="[engine:junit-vintage]/[runner:junit.JunitSuite]">
+    <testsuite name="junit.PushTestCase" time="0.0" uniqueid="[engine:junit-vintage]/[runner:junit.JunitSuite]/[test:junit.PushTestCase]">
+      <testcase name="testPush" classname="junit.PushTestCase" time="0.0" displayname="testPush" uniqueid="[engine:junit-vintage]/[runner:junit.JunitSuite]/[test:junit.PushTestCase]/[test:testPush(junit.PushTestCase)]"/>
+      <testcase name="testOverflow" classname="junit.PushTestCase" time="0.0" displayname="testOverflow" uniqueid="[engine:junit-vintage]/[runner:junit.JunitSuite]/[test:junit.PushTestCase]/[test:testOverflow(junit.PushTestCase)]"/>
+    </testsuite>
+    <testsuite name="junit.PopTestCase" time="0.0" uniqueid="[engine:junit-vintage]/[runner:junit.JunitSuite]/[test:junit.PopTestCase]">
+      <testcase name="testPop" classname="junit.PopTestCase" time="0.0" displayname="testPop" uniqueid="[engine:junit-vintage]/[runner:junit.JunitSuite]/[test:junit.PopTestCase]/[test:testPop(junit.PopTestCase)]"/>
+      <testcase name="testUnderflow" classname="junit.PopTestCase" time="0.0" displayname="testUnderflow" uniqueid="[engine:junit-vintage]/[runner:junit.JunitSuite]/[test:junit.PopTestCase]/[test:testUnderflow(junit.PopTestCase)]"/>
+    </testsuite>
+    <testsuite name="junit.IsEmptyTestCase" time="0.0" uniqueid="[engine:junit-vintage]/[runner:junit.JunitSuite]/[test:junit.IsEmptyTestCase]">
+      <testcase name="testIsnotEmpty" classname="junit.IsEmptyTestCase" time="0.0" displayname="testIsnotEmpty" uniqueid="[engine:junit-vintage]/[runner:junit.JunitSuite]/[test:junit.IsEmptyTestCase]/[test:testIsnotEmpty(junit.IsEmptyTestCase)]"/>
+    </testsuite>
+  </testsuite>
+</testrun>

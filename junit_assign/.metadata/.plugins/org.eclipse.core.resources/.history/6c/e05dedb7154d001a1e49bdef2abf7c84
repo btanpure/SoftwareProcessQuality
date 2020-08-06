@@ -1,0 +1,40 @@
+package junit;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import stack.Stack;
+
+class StackPushTestCase {
+
+	Stack stack = new Stack(3);
+  	
+	  @Before
+	  public void setup()
+	  {
+	    stack = new Stack(2);
+	  }
+	  
+	  @Test 
+	  public void testPush() 
+	 { 
+		  System.out.println("Testing push function...");
+		  stack.push(10);
+		  assertEquals(10, stack.peek());
+		  System.out.println("\n");
+	 }
+	  
+	  @Test 
+	  public void testPushOverflow() 
+	 { 
+		  System.out.println("Testing push overflow");
+		  stack.push(10);
+		  stack.push(3);
+		  stack.push(3);
+		  assertEquals(10, stack.peek());
+		  System.out.println("\n");
+     }
+
+}

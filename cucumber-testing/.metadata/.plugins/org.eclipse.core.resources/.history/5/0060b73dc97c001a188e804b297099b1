@@ -1,0 +1,11 @@
+package CucumberTest.CucumberTest;
+import org.junit.runner.RunWith;
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+
+
+@RunWith(Cucumber.class)
+@CucumberOptions(features="classpath:CucumberTest/CucumberTest/cucumberJava.feature",monochrome = true, dryRun = false, strict = true)
+public class testRunner {
+
+}

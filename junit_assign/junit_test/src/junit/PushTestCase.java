@@ -1,0 +1,39 @@
+package junit;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import stack.Stack;
+
+public class PushTestCase {
+	
+	  Stack stack = new Stack(5);
+	  @Before
+	  public void setup()
+	  {
+	    stack = new Stack(5);
+	  }
+	  
+	  @Test 
+	  public void testPush() 
+	 { 
+		  System.out.println("\nTesting push for integer");
+		  stack.push(30);
+		  System.out.println("Element pushed is: "+ stack.peek());
+		  assertEquals(30, stack.peek());
+	 }
+	  
+	  @Test (expected = ArrayIndexOutOfBoundsException.class)
+	  public void testOverflow() 
+	 { 
+		  System.out.println("\nTesting overflow condition");
+		  stack.push(5);
+		  stack.push(10);
+		  stack.push(15);
+		  stack.push(20);
+		  stack.push(25);
+		  stack.push(30);
+   }
+}

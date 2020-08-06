@@ -1,0 +1,17 @@
+INDEX VERSION 1.131+D:\DCU\Software_Process_Quality\junit_assign\.metadata\.plugins\org.eclipse.jdt.core
+2888639684.index
+2973540341.index
+1740461684.index
+786904971.index
+2247879794.index
+1072780938.index
+1215603414.index
+2237450380.index
+1737739800.index
+3683906025.index
+2834911962.index
+542446923.index
+1834410318.index
+511565634.index
+1248545562.index
+173539357.index

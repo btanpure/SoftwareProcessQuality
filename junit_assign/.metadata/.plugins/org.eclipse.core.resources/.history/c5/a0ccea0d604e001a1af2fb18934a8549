@@ -1,0 +1,45 @@
+package junit;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import stack.Stack;
+
+public class StackIsEmptyTestCase {
+
+	Stack stack = new Stack(5);
+  	
+	
+	  @Before 
+	  public void setup() 
+	  { 
+		  stack = new Stack(5);
+		  System.out.println("\n-----------------------------------");
+		    System.out.println("Testing IsEmpty function");
+	  }
+	  
+	 @Test
+	 public void testIsEmpty() 
+	 {
+			System.out.println("Testing if stack is empty...");
+			System.out.println("-----------------------------------");
+		 	assertEquals(true, stack.isEmpty());
+	   	    stack.push(1);
+	   	    assertEquals(false, stack.isEmpty());
+	   	 System.out.println("Test Passed");
+	}
+	 
+	 @Test
+	 public void testIsnotEmpty() 
+	 {
+			System.out.println("Pushing integer and testing if stack is empty...");
+			System.out.println("-----------------------------------");
+		 	assertEquals(true, stack.isEmpty());
+	   	    stack.push(1);
+	   	    assertEquals(true, stack.isEmpty());
+	   	    System.out.println("Test Passed");
+	}
+	 
+}

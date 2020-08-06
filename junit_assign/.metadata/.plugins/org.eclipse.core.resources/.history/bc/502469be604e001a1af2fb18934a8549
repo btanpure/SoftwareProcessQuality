@@ -1,0 +1,19 @@
+package junit;
+
+import org.junit.runner.JUnitCore;
+import org.junit.runner.Result;
+import org.junit.runner.notification.Failure;
+
+public class StackTestRunner {
+   public static void main(String[] args) {
+      Result result = JUnitCore.runClasses(StackJunitSuite.class);
+
+      for (Failure failure : result.getFailures()) {
+    	  System.out.println("Test failed with message: "+failure.toString());
+      }
+	
+      System.out.println("\n\nTotal "+result.getRunCount()+" tests run");
+      System.out.println(result.getFailureCount()+" tests Failed");
+      System.out.println("Total time taken: "+(result.getRunTime()/1000)+" seconds");
+   }
+} 

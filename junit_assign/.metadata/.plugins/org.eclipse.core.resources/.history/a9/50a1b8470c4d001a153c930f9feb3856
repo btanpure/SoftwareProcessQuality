@@ -1,0 +1,16 @@
+package junit;
+
+import org.junit.Before;
+import stack.Stack;
+
+class StackPushTestCase {
+
+	Stack stack = new Stack(3);
+  	
+	  @Before
+	  public void setup()
+	  {
+	    stack = new Stack(10);
+	  }
+
+}

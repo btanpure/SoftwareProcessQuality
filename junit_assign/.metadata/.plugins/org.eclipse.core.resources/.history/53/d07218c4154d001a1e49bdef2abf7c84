@@ -1,0 +1,37 @@
+package junit;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import stack.Stack;
+
+public class StackIsEmptyTestCase {
+
+	Stack stack = new Stack(3);
+  	
+	
+	  @Before 
+	  public void setup() 
+	  { 
+		  stack = new Stack(10); 
+	  }
+	  
+	 @Test
+	 public void testSuccessIsEmpty() 
+	 {
+			assertEquals(true, stack.isEmpty());
+	   	    stack.push(1);
+	   	    assertEquals(false, stack.isEmpty());
+	   	    assertEquals(1, stack.pop());
+	   	    assertEquals(true, stack.isEmpty());
+		}
+	 
+	 @Test
+	 public void testFailIsEmpty() {
+			// assertEquals(true, stack.isEmpty());
+	   	    stack.push(1);
+	   	    assertEquals(true, stack.isEmpty());
+		}
+}

@@ -1,0 +1,10 @@
+package CucumberTest.CucumberTest;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+        weatherCheck a = new weatherCheck();
+    	System.out.println(a.check_wind(22,5,22));
+    }
+}

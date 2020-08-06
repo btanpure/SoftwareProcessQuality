@@ -1,0 +1,53 @@
+package CucumberTest.CucumberTest;
+
+public class weatherCheck 
+{
+	double temp, wind_speed, pressure;
+	double a_wind_speed = 3;
+	double b_wind_speed = 7;
+	double a_pressure = 26;
+	double b_pressure = 31;
+	String result;
+	public weatherCheck(double temp, double wind_speed, double pressure) {
+		super();
+		this.temp = temp;
+		this.wind_speed = wind_speed;
+		this.pressure = pressure;
+	}
+	
+	String check_wind(double temp, double wind, double pressure)
+	{
+		if(temp>20)
+		{
+			if(wind>a_wind_speed)
+				return check_pressure("a",pressure);
+			else
+				return "No Rain";
+		}
+		else
+		{
+			if(wind>b_wind_speed)
+				return "Rain";
+			else
+				return check_pressure("b",pressure);
+		}
+	}
+	
+	String check_pressure(String w_case, float pressure)
+	{
+		if(w_case.equals("a"))
+		{
+			if(pressure>a_pressure)
+				return "Rain";
+			else
+				return "No Rain";
+		}
+		else
+		{
+			if(pressure>b_pressure)
+				return "Rain";
+			else
+				return "No Rain";
+		}
+	}
+}

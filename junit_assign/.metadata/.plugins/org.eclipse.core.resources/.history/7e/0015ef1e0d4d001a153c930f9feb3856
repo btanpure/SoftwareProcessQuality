@@ -1,0 +1,36 @@
+package junit;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import stack.Stack;
+
+public class StackPopTestCase {
+
+	Stack stack = new Stack(3);
+  	
+	  @Before
+	  public void setup()
+	  {
+	    stack = new Stack(10);
+	  }
+	
+	  @Test public void testSuccessPop() 
+	  { 
+		  stack.push(10);
+		  // assertEquals(10, stack.peek());
+		  assertEquals(10, stack.pop());
+		  //fail("Not yet implemented"); 
+		  
+	  }
+	  
+	  
+	  @Test public void testFailurePop() 
+	  { 
+		  stack.push(10);
+		  // stack.push(15);
+		  assertEquals(10, stack.pop());
+	  }
+}

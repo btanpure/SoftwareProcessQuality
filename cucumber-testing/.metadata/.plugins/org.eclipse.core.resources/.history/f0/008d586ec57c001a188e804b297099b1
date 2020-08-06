@@ -1,0 +1,35 @@
+package CucumberTest.CucumberTest;
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Assert.*;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import junit.framework.Assert;
+
+public class stepDefinition {
+	
+	weatherCheck a = new weatherCheck();
+	String result;
+	@Given("the temp is {double} degree Celcius")
+	public void the_temp_is_more_than_degree_Celcius(Double double1) {
+	   a.setTemp(22.0);
+	}
+
+	@Given("the wind speed is {double} kmph")
+	public void the_wind_speed_is_kmph(Double double1) {
+	    a.setWind_speed(5.0);
+	}
+
+	@When("the pressure is {double} inHg")
+	public void the_pressure_is_inHg(Double double1) {
+	    a.setPressure(30.0);
+	    result = a.check_wind(a.getTemp(), a.getWind_speed(), a.getPressure());
+	}
+
+	@Then("I validate that result is \\{string}")
+	public void i_validate_that_result_is() throws Throwable
+	{
+		assertEquals(result, "Rain");
+	}
+}

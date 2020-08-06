@@ -1,0 +1,22 @@
+
+Feature: Rain Check
+  I want to use this template to check if it will rain or not
+
+
+  Scenario: Check for case A
+    Given the temp is more than 20 degree Celcius
+    And the wind speed is more than 5 kmph
+    When the pressure is 23 inHg
+    Then I validate that outcome is "No Rain".
+
+
+  Scenario Outline: Check for case A
+    Given the temp is more less 20 degree Celcius
+    And the wind speed is 9 kmph
+    Then I verify that pressure does not matter in step
+		And I validate that the outcome is "Rain".
+	
+  ##  Examples: 
+  ##    | name  | value | status  |
+  ##    | temp |     22 | success |
+  ##   | name2 |     7 | Fail    |

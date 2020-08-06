@@ -1,0 +1,27 @@
+package junit;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import stack.Stack;
+
+class StackPushTestCase {
+
+	Stack stack = new Stack(3);
+  	
+	  @Before
+	  public void setup()
+	  {
+	    stack = new Stack(10);
+	  }
+	  
+	  @Test 
+	  public void testPush() 
+	 { 
+		  stack.push(10);
+		  assertEquals(10, stack.peek());
+     }
+
+}

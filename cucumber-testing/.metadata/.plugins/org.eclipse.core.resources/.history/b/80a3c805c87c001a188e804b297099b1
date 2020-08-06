@@ -1,0 +1,22 @@
+
+Feature: Rain Check
+  I want to use this template to check if it will rain or not
+
+
+  Scenario: Check for case A having rainy day
+    Given the temp is 22.0 degree Celcius
+    And the wind speed is 5.0 kmph
+    When the pressure is 30.0 inHg
+    Then I validate that result is "Rain"
+
+  Scenario: Check for case B having rainy day
+    Given the temp is 18.0 degree Celcius
+    And the wind speed is 9.0 kmph
+    When the pressure is 25.0 inHg
+    Then I validate that result is "Rain"
+    
+  Scenario: Check for case B with no rain
+    Given the temp is 18.0 degree Celcius
+    And the wind speed is 9.0 kmph
+    When the pressure is 25.0 inHg
+    Then I validate that result is "Rain"

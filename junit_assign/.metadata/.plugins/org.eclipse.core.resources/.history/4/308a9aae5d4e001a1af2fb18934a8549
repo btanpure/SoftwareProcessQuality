@@ -1,0 +1,40 @@
+package junit;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import stack.Stack;
+
+public class StackPopTestCase {
+
+	Stack stack = new Stack(3);
+  	
+	  @Before
+	  public void setup()
+	  {
+	    stack = new Stack(10);
+	    System.out.println("\n-----------------------------------");
+	    System.out.println("Testing Pop function");
+	    System.out.println("-----------------------------------");
+	  }
+	
+	  @Test public void testPop() 
+	  { 
+		  System.out.println("\nTesting pop function...");
+		  stack.push(10);
+		  assertEquals(10, stack.pop());
+	  }
+	  
+	  @Test (expected = ArrayIndexOutOfBoundsException.class) 
+	  public void testUnderflow() 
+	  { 
+		
+		  System.out.println("\nTesting pop underflow...");
+		  stack.push(10);
+		  stack.pop();
+		  stack.pop();
+		  assertEquals("zero",  0);
+	  }
+}

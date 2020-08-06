@@ -1,0 +1,27 @@
+package junit;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import stack.Stack;
+
+public class IsEmptyTestCase {
+
+	Stack stack = new Stack(5);
+
+	  @Before 
+	  public void setup() 
+	  { 
+		  stack = new Stack(5);
+	  }
+	 
+	 @Test
+	 public void testIsnotEmpty() 
+	 {
+			System.out.println("\nTesting if stack is empty...");
+		 	assertEquals(true, stack.isEmpty());
+		 	 System.out.println("Element pushed is: "+ stack.peek());
+	}
+}
